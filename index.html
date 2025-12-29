@@ -1,156 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almirant Soluções em TI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8fafc;
-            color: #334155;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        .tagline {
-            font-size: 1.5rem;
-            margin: 20px 0 0;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        section {
-            margin-bottom: 80px;
-        }
-        h2 {
-            font-size: 2.2rem;
-            color: #1e40af;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            text-align: center;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        ul li {
-            font-size: 1.1rem;
-            padding: 10px 0;
-            position: relative;
-            padding-left: 30px;
-        }
-        ul li::before {
-            content: "✓";
-            color: #3b82f6;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .contact-info {
-            text-align: center;
-            font-size: 1.2rem;
-            margin: 40px 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            margin: 10px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-        }
-        .btn-calendly {
-            background: #006BFF;
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #1e293b;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1.3rem; }
-            header { padding: 80px 20px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALMIRANT - Soluções em TI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --secondary: #020617;
+      --accent: #22d3ee;
+      --text: #e5e7eb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(14,165,233,.18), rgba(34,211,238,.06));
+      z-index: 0;
+    }
+
+    .hero {
+      max-width: 900px;
+      z-index: 1;
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 700;
+      color: white;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      margin: 1.5rem 0 2rem;
+      font-size: 1.15rem;
+      color: #cbd5f5;
+      line-height: 1.6;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: #020617;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 30px rgba(34,211,238,.4);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .cta.alt {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(34,211,238,.5);
+      box-shadow: none;
+    }
+
+    .cta:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 45px rgba(34,211,238,.7);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+      max-width: 700px;
+      margin: .8rem auto 0;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(2,6,23,.75);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      border: 1px solid rgba(34,211,238,.15);
+      backdrop-filter: blur(12px);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.6);
+    }
+
+    .card h3 {
+      color: white;
+      margin-bottom: .8rem;
+    }
+
+    .card p {
+      color: #cbd5f5;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(120deg, rgba(14,165,233,.12), rgba(34,211,238,.04));
+      border-radius: 1.5rem;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+      transition: transform .3s ease;
+      z-index: 10;
+    }
+
+    .whatsapp:hover { transform: scale(1.08); }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: #94a3b8;
+      font-size: .9rem;
+      margin-top: 4rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Almirant Soluções em TI</h1>
-        <p class="tagline">Suporte e Consultoria para Empresas</p>
-    </header>
+<header>
+  <div class="hero">
+    <h1><span>ALMIRANT</span><br>Soluções em Tecnologia da Informação</h1>
+    <p>Suporte técnico, consultoria em Gestão e Governança de TI e soluções modernas para micro e pequenas empresas que buscam crescimento, segurança e eficiência.</p>
+    <div class="cta-group">
+      <a href="#servicos" class="cta">Nossos serviços</a>
+      <a href="#contato" class="cta alt">Agendar atendimento</a>
+    </div>
+  </div>
+</header>
 
-    <div class="container">
+<section id="servicos">
+  <div class="section-title">
+    <h2>Nossos Serviços</h2>
+    <p>Uma mescla completa de suporte técnico, segurança, nuvem e gestão estratégica de TI</p>
+  </div>
 
-        <section>
-            <h2>Sobre Nós</h2>
-            <p>Soluções em Tecnologia da Informação especializadas em Power BI, suporte técnico e consultoria para otimizar os processos da sua empresa.</p>
-        </section>
-
-        <section>
-            <h2>Serviços</h2>
-            <ul>
-                <li>Desenvolvimento e dashboards em Power BI</li>
-                <li>Suporte técnico remoto e presencial</li>
-                <li>Consultoria em TI e otimização de sistemas</li>
-                <li>Treinamentos personalizados</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Entre em Contato</h2>
-            <div class="contact-info">
-                (81) 99649-1586 (WhatsApp)<br>
-                ealmirant@gmail.com<br>
-                Recife - PE e região
-            </div>
-            <div style="text-align: center;">
-                <a href="https://wa.me/5581996491586" class="btn btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
-                <a href="https://calendly.com/ealmirant" class="btn btn-calendly" target="_blank">Agende uma consulta via Calendly</a>
-            </div>
-        </section>
-
+  <div class="services">
+    <div class="card">
+      <h3>Manutenção de Computadores</h3>
+      <p>Formatação, troca de peças, upgrades de hardware, remoção de vírus e otimização de desempenho para maior vida útil dos equipamentos.</p>
     </div>
 
-    <footer>
-        © 2025 Almirant Soluções em TI. Todos os direitos reservados.
-    </footer>
+    <div class="card">
+      <h3>Redes e Internet Corporativa</h3>
+      <p>Configuração de Wi‑Fi profissional, cabeamento estruturado, compartilhamento de impressoras e internet estável para sua empresa.</p>
+    </div>
+
+    <div class="card">
+      <h3>Segurança Digital e Backup</h3>
+      <p>Antivírus corporativo, backup automático, proteção contra ransomware e recuperação segura de dados críticos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Suporte Remoto e Presencial</h3>
+      <p>Atendimento rápido via AnyDesk ou visita técnica em Recife e região, reduzindo paradas e prejuízos operacionais.</p>
+    </div>
+
+    <div class="card">
+      <h3>Soluções em Nuvem</h3>
+      <p>Implantação e suporte a Google Workspace, Microsoft 365, armazenamento seguro e acesso aos dados de qualquer lugar.</p>
+    </div>
+
+    <div class="card">
+      <h3>Consultoria em Gestão e Governança de TI</h3>
+      <p>Planejamento estratégico de TI, boas práticas de governança, controle de custos, compliance e alinhamento da tecnologia aos objetivos do negócio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <h2>Agende seu Atendimento</h2>
+  <p>Fale agora com um especialista e descubra como a tecnologia pode impulsionar o seu negócio.</p>
+  <br>
+  <a href="https://wa.me/5599999999999" target="_blank" class="cta">Chamar no WhatsApp</a>
+  <br><br>
+  <a href="https://calendly.com/ealmirant" class="cta alt" target="_blank">Agende uma consulta via Calendly</a>
+</section>
+
+<a href="https://wa.me/5599999999999" target="_blank" class="whatsapp">WhatsApp</a>
+
+<footer>
+  © 2025 ALMIRANT Soluções em Tecnologia da Informação · Gestão, Governança e Tecnologia para o crescimento do seu negócio
+</footer>
 
 </body>
 </html>
