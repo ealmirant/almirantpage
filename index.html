@@ -12,6 +12,7 @@
       --secondary: #020617;
       --accent: #22d3ee;
       --text: #e5e7eb;
+      --server: #f59e0b; /* Cor dourada para o botão do servidor */
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -83,6 +84,12 @@
       text-decoration: none;
       box-shadow: 0 0 30px rgba(34,211,238,.4);
       transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    /* Estilo do Botão do Servidor */
+    .cta.server {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
     }
 
     .cta.alt {
@@ -212,15 +219,15 @@
 <header>
   <div class="hero">
     <h1><span>ALMIRANT</span><br>Soluções em Tecnologia da Informação</h1>
-    <p>Suporte técnico, consultoria em Gestão e Governança de TI e soluções modernas para micro e pequenas empresas que buscam crescimento, segurança e eficiência.</p>
+    <p>Suporte técnico, consultoria em Gestão e Governança de TI e soluções modernas para micro e pequenas empresas.</p>
     <div class="cta-group">
       <a href="#servicos" class="cta">Nossos serviços</a>
+      <a href="/servidor" class="cta server">Acessar Servidor</a>
       <a href="#portfolio" class="cta alt">Ver portfólio</a>
     </div>
   </div>
 </header>
 
-<!-- SERVIÇOS (ORIGINAL) -->
 <section id="servicos">
   <div class="section-title">
     <h2>Nossos Serviços</h2>
@@ -237,7 +244,6 @@
   </div>
 </section>
 
-<!-- PORTFÓLIO (ACRESCENTADO) -->
 <section id="portfolio">
   <div class="section-title">
     <h2>Portfólio & Experiência</h2>
@@ -252,7 +258,6 @@
   </div>
 </section>
 
-<!-- CONTATO (ORIGINAL INTACTO) -->
 <section id="contato" class="contact">
   <h2>Agende seu Atendimento</h2>
   <p>Fale agora com um especialista e descubra como a tecnologia pode impulsionar o seu negócio.</p>
@@ -262,5 +267,11 @@
   <a href="https://calendly.com/ealmirant" class="cta alt" target="_blank">Agende uma consulta via Calendly</a>
 </section>
 
-<a href="https://wa.me/5581996491586" target="_blan_
+<footer>
+  <p>&copy; 2026 ALMIRANT - Todos os direitos reservados.</p>
+</footer>
 
+<a href="https://wa.me/5581996491586" target="_blank" class="whatsapp">WhatsApp</a>
+
+</body>
+</html>
