@@ -89,7 +89,7 @@
 
     .cta.server {
       background: linear-gradient(90deg, #f59e0b, #d97706);
-      box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 30px rgba(245,158,11,.35);
     }
 
     .cta.alt {
@@ -115,5 +115,117 @@
       margin-bottom: 3rem;
     }
 
-    .section-t
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: white;
+    }
 
+    .section-title p {
+      color: #94a3b8;
+      max-width: 700px;
+      margin: .8rem auto 0;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(2,6,23,.75);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      border: 1px solid rgba(34,211,238,.15);
+      backdrop-filter: blur(12px);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.6);
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(120deg, rgba(14,165,233,.12), rgba(34,211,238,.04));
+      border-radius: 1.5rem;
+      padding: 4rem 2rem;
+      margin-top: 4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: #94a3b8;
+      font-size: .9rem;
+      margin-top: 4rem;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+      z-index: 10;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1><span>ALMIRANT</span><br>Soluções em Tecnologia da Informação</h1>
+    <p>Suporte técnico, consultoria em Gestão e Governança de TI e soluções modernas para micro e pequenas empresas.</p>
+
+    <div class="cta-group">
+      <a href="#servicos" class="cta">Nossos serviços</a>
+
+      <!-- BOTÃO DO SERVIDOR -->
+      <a href="https://pocket-consecutive-stripes-urban.trycloudflare.com"
+         class="cta server"
+         target="_blank"
+         rel="noopener">
+         Acessar Servidor
+      </a>
+
+      <a href="#portfolio" class="cta alt">Ver portfólio</a>
+    </div>
+  </div>
+</header>
+
+<section id="servicos">
+  <div class="section-title">
+    <h2>Nossos Serviços</h2>
+    <p>Suporte, segurança, nuvem e governança de TI</p>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <h2>Agende seu Atendimento</h2>
+  <p>Fale com um especialista agora mesmo.</p>
+  <br>
+  <a href="https://wa.me/5581996491586" target="_blank" class="cta">Chamar no WhatsApp</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 ALMIRANT - Todos os direitos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5581996491586" target="_blank" class="whatsapp">WhatsApp</a>
+
+</body>
+</html>
